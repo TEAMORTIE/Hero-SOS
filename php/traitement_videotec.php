@@ -72,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt->bindParam(':image', $image_path, PDO::PARAM_STR);
 
         if ($stmt->execute()) {
-            echo "Le film a été ajouté avec succès.";
+            header('Location: ../pages/videotec.php');
         } else {
             echo "Erreur lors de l'ajout du film.";
         }
