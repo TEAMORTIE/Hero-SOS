@@ -1,0 +1,413 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Marvel", serif !important;
+  font-weight: 800;
+  font-style: normal;
+}
+body {
+  background-attachment: fixed;
+  background-position: center;
+}
+.barre-recherche {
+  display: flex;
+  align-items: center;
+}
+
+.ppheader {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.barre-recherche2 {
+  display: flex;
+  justify-content: center;
+  margin-right: 30px;
+  background-color: rgba(9, 12, 155, 0.612);
+  backdrop-filter: blur(5px);
+  border: white;
+  padding: 2%;
+}
+
+.logo-alignement {
+  display: flex;
+  justify-content: flex-start;
+  text-align: start;
+}
+
+img.logo1 {
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+  width: 65%;
+  margin-left: 2em;
+}
+
+i {
+  margin-right: 20px;
+}
+
+.navbar {
+  color: white;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(9, 12, 155, 0.612);
+  backdrop-filter: blur(5px);
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.navbar .links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.navbar .burger-menu-button {
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.navbar li {
+  list-style: none;
+}
+
+.navbar a {
+  text-decoration: none !important;
+  font-size: 1.2rem;
+}
+
+.navbar a:hover {
+  color: #01050e;
+}
+
+.navbar .logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar .burger-menu-button {
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-right: 2em;
+}
+
+.action-button {
+  color: #120d31;
+  padding: 0.5rem 1.2rem;
+  border-radius: 5px;
+  outline: none;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.co {
+  color: #01050e !important;
+}
+
+.action-button:hover {
+  color: #fff !important;
+  border: 1px solid #fff;
+}
+
+.pro {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.pro:hover {
+  background-color: #fff;
+  color: #120d31;
+}
+
+/*burger menu*/
+
+.burger-menu {
+  display: none;
+  height: 0;
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  width: 200px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 2;
+}
+
+.burger-menu.open {
+  height: 100%;
+}
+
+.burger-menu ul {
+  background-color: #01050e;
+  padding: 1em 0;
+  border-radius: 10px;
+}
+
+.burger-menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.burger-menu a {
+  color: white;
+  text-decoration: none !important;
+}
+.divider {
+  height: 1px;
+  background-color: #fff;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+}
+
+.burger-menu .action-button {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons-burger-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: auto;
+  width: 50%;
+}
+
+.logo-alignement {
+  display: flex;
+  justify-content: flex-start;
+  text-align: start;
+}
+
+img.logo1 {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  width: 50%;
+  margin-left: 4em;
+}
+
+header {
+  position: relative;
+  padding: 0 2rem;
+  background-color: rgba(0, 0, 0, 0.238);
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-right: 2em;
+}
+
+.action-button {
+  background-color: #63c7b2;
+  color: #120d31;
+  border: 1px solid #63c7b2;
+  padding: 0.5rem 1.2rem;
+  border-radius: 5px;
+  outline: none;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.action-button:hover {
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.pro {
+  background-color: transparent !important;
+  color: #fff !important;
+  border: 1px solid #fff !important;
+}
+
+.pro:hover {
+  background-color: #fff;
+  color: #120d31 !important;
+}
+.popup {
+  display: none; /* Masqué par défaut */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+/* Style pour l'arrière-plan semi-transparent */
+.overlay {
+  display: none; /* Masqué par défaut */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+}
+
+/* Style pour le bouton de fermeture */
+.close-btn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  background-color: #d32f2f;
+}
+.card1 {
+  margin-left: 5em;
+  margin-right: 5em;
+  position: relative;
+  width: 400px;
+  height: 500px;
+  border-radius: 28px;
+  z-index: 1111;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+.card1:hover {
+  filter: brightness(0.5);
+}
+.card1:hover {
+  transform: scale(1.05);
+}
+.bg {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 380px;
+  height: 480px;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.441);
+  backdrop-filter: blur(24px);
+  border-radius: 20px;
+  overflow: hidden;
+  outline: 2px solid white;
+}
+.bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.blob {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: #ff0000;
+  opacity: 1;
+  filter: blur(12px);
+  animation: blob-bounce 5s infinite ease;
+}
+.blob2 {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: #1e00ff;
+  opacity: 1;
+  filter: blur(12px);
+  animation: blob-bounce 5s infinite ease;
+}
+.menu_profil {
+  color: white;
+}
+@keyframes blob-bounce {
+  0% {
+    transform: translate(-100%, -100%) translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: translate(-100%, -100%) translate3d(100%, 0, 0);
+  }
+
+  50% {
+    transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
+  }
+
+  75% {
+    transform: translate(-100%, -100%) translate3d(0, 100%, 0);
+  }
+
+  100% {
+    transform: translate(-100%, -100%) translate3d(0, 0, 0);
+  }
+}
+
+@media (max-width: 990px) {
+  header {
+    background: none;
+  }
+
+  .navbar .links,
+  .navbar .action-button {
+    display: none;
+  }
+
+  .navbar .burger-menu-button {
+    display: block;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+  .navbar a {
+    font-size: 1.2em;
+  }
+}
+@media (max-width: 1203px) {
+  .navbar a {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 1100px) {
+  .navbar a {
+    font-size: 0.8em;
+  }
+}

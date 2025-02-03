@@ -1,0 +1,83 @@
+
+Demande de super hero
+
+$mail = new PHPMailer(true);
+try { 
+$mail->isSMTP();
+$mail->Host = 'smtp.gmail.com';
+$mail->SMTPAuth = true; $mail->Username = 'bultekevin07@gmail.com';
+// Remplacez par votre email 
+$mail->Password = 'avbg xefs iapp ghrb';
+// Remplacez par votre clé d'application 
+$mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+$mail->Port = 465;
+
+$mail->setFrom('bultekevin07@gmail.com', 'HERO SOS');
+$mail->addAddress($email); 
+
+$mail->isHTML(true);
+$mail->Subject = 'Nouvelle demande pour devenir un super hero';
+$mail->Body = "<h1>Demande de Super Hero </h1><p>Une nouvelle demande à été déposer sur votre compte en attente de validation</p>;
+$mail->AltBody =“Une nouvelle demande à été déposer sur votre compte en attente de validation";
+
+$mail->send();
+} catch (Exception $e) {
+$message = "Erreur lors de l'envoi de l'e-mail : {$mail->ErrorInfo}";
+}
+
+Validation super hero 
+
+
+$mail = new PHPMailer(true);
+try { 
+$mail->isSMTP();
+$mail->Host = 'smtp.gmail.com';
+$mail->SMTPAuth = true; $mail->Username = 'bultekevin07@gmail.com';
+// Remplacez par votre email 
+$mail->Password = 'avbg xefs iapp ghrb';
+// Remplacez par votre clé d'application 
+$mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+$mail->Port = 465;
+
+$mail->setFrom('bultekevin07@gmail.com', 'HERO SOS');
+$mail->addAddress($email); 
+
+$mail->isHTML(true);
+$mail->Subject = 'Réponse a votre demande Pour devenir super héro';
+$mail->Body = "<h1>Bonjour ,</h1><p>Votre demande a été accepté</p><p>Désormais vous faites partie de la communauté des supers-heros vous pouvez à présent intervenir sur les incidents.</p>";
+$mail->AltBody = "Votre demande a été accepté ,Désormais vous faites partie de la communauté des supers-heros vous pouvez à présent intervenir sur les incidents.";
+
+$mail->send();
+} catch (Exception $e) {
+$message = "Erreur lors de l'envoi de l'e-mail : {$mail->ErrorInfo}";
+}
+
+changement de statut
+
+$mail = new PHPMailer(true);
+try { 
+$mail->isSMTP();
+$mail->Host = 'smtp.gmail.com';
+$mail->SMTPAuth = true; $mail->Username = 'bultekevin07@gmail.com';
+// Remplacez par votre email 
+$mail->Password = 'avbg xefs iapp ghrb';
+// Remplacez par votre clé d'application 
+$mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+$mail->Port = 465;
+
+$mail->setFrom('bultekevin07@gmail.com', 'HERO SOS');
+$mail->addAddress($email); 
+
+$mail->isHTML(true);
+$mail->Subject = 'Réponse a votre demande de changement de statut';
+$mail->Body = "<h1>Bonjour ,</h1><p>Votre demande a été accepté</p><p>Votre statut a bien été changé , vous pouvez consulter à partir de votre compte.</p>";
+$mail->AltBody = "Votre demande a été accepté votre statut a bien été changé , vous pouvez consulter à partir de votre compte.";
+
+$mail->send();
+} catch (Exception $e) {
+$message = "Erreur lors de l'envoi de l'e-mail : {$mail->ErrorInfo}";
+}
+
+
+
+

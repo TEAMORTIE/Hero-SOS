@@ -1,0 +1,317 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "marvel", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+  background-image: url("../images/bg-profils.jpg");
+  background-attachment: fixed;
+  background-position: center;
+}
+li {
+  list-style: none;
+}
+.menu-gauche {
+  backdrop-filter: blur(15px);
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  background-color: rgba(48, 102, 190, 0.534);
+  width: 20%;
+  padding: 1%;
+}
+.navbar {
+  width: 80% !important;
+  margin-left: 20% !important;
+}
+.menu-gauche a {
+  text-decoration: none;
+  color: white;
+  font-weight: 1000;
+  font-size: 1.2em;
+  margin-left: 1em;
+}
+
+.espace {
+  margin-top: 7%;
+}
+
+.pp {
+  height: auto;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50em;
+  margin-top: 5%;
+}
+
+.ligne {
+  min-height: 1px;
+  background-color: white;
+  margin-top: 6%;
+}
+.profil {
+  display: flex;
+}
+.detail-profil {
+  min-height: 89vh;
+  backdrop-filter: blur(5px);
+  margin-left: 20%;
+  background-color: #ffffffc6;
+  width: 80%;
+  color: black !important;
+}
+.haut {
+  margin: 2em;
+  display: flex;
+}
+.haut2 {
+  background-color: red;
+}
+.moyen {
+  background-color: orange;
+}
+.bas {
+  background-color: gold;
+}
+h2 {
+  color: black;
+  font-size: 35px;
+  font-weight: 1000;
+}
+p {
+  font-size: 25px;
+}
+.label {
+  font-size: 14px;
+}
+.info {
+  font-weight: 1000;
+  margin-top: 1em;
+  font-size: 25px;
+
+  color: black !important;
+}
+.petit {
+  font-size: 20px;
+  color: rgb(68, 68, 68);
+}
+.carre {
+  color: black !important;
+  width: 25em;
+  margin-top: 2em;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+}
+.containerflex {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.code {
+  width: 11.9em;
+}
+.boutons {
+  text-decoration: none;
+
+  color: white;
+  font-weight: 900;
+  font-size: 20px;
+  margin-top: 2em;
+  padding: 1em 3em;
+  background-color: rgb(48, 102, 190);
+  border-radius: 5px;
+}
+
+.boutons2 {
+  text-decoration: none;
+
+  color: white;
+  font-weight: 900;
+  font-size: 15px;
+  margin-top: 2em;
+  padding: 1em 2em;
+  background-color: rgb(48, 102, 190);
+  border-radius: 5px;
+}
+
+.boutons3 {
+  text-decoration: none;
+  color: white;
+  font-weight: 900;
+  font-size: 20px;
+  margin-top: 2em;
+  padding: 1em 3em;
+  background-color: rgb(22, 55, 108);
+  border-radius: 5px;
+}
+.boutons:hover {
+  background-color: rgb(22, 55, 108);
+}
+.boutons2:hover {
+  background-color: rgb(22, 55, 108);
+}
+.boutons3:hover {
+  background-color: rgb(48, 102, 190);
+}
+i {
+  font-size: 1.2em;
+  font-weight: 100;
+  color: white;
+  margin-right: 0.5em;
+}
+.active {
+  color: black !important;
+}
+
+.active i {
+  color: black !important;
+}
+.gros_carre {
+  width: 23%;
+  margin-top: 2em;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 0.5em 1.5em;
+  color: white !important;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 1000;
+  background-image: url("https://img.freepik.com/free-vector/stylish-halftone-comic-zoom-background_1409-1417.jpg?semt=ais_hybrid");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+.gros_carre .label {
+  font-size: 25px;
+}
+.resultat {
+  font-size: 30px;
+}
+.gros_carre:hover {
+  background-color: #ffffff;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-image: url("https://img.freepik.com/free-vector/stylish-halftone-comic-zoom-background_1409-1417.jpg?semt=ais_hybrid");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#file-form {
+  margin-left: 2em;
+}
+
+th {
+  background-color: #d2d2d2c6;
+  border: 1px solid black;
+  padding: 1em 0em;
+  text-align: center;
+
+  font-weight: 800 !important;
+}
+td {
+  background-color: #d2d2d2c6;
+  border: 1px solid black;
+  padding: 2em 0em;
+  text-align: center;
+
+  font-weight: 800 !important;
+}
+input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  color: black;
+  font-size: 25px;
+}
+textarea {
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  color: black !important;
+  font-size: 25px;
+}
+input:active {
+  border: none;
+}
+/* Cacher le champ de fichier original */
+#file-input {
+  display: none;
+}
+
+/* Style pour le bouton personnalisé */
+.custom-file-label {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgb(22, 55, 108);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-file-label:hover {
+  background-color: rgb(7, 34, 141);
+}
+
+/* Afficher le nom du fichier sélectionné */
+.file-name {
+  margin-left: 10px;
+  font-style: italic;
+  color: #333;
+}
+@media (max-width: 1200px) {
+  .carre {
+    width: 90%;
+  }
+}
+
+@media (max-width: 900px) {
+  .responsive {
+    display: none;
+  }
+  .menu-gauche {
+    width: 10%;
+  }
+
+  .menu-gauche li a {
+    margin: 0;
+  }
+  .detail-profil {
+    margin-left: 10%;
+    width: 90%;
+  }
+  .navbar {
+    width: 90% !important;
+    margin-left: 10% !important;
+  }
+  .gros_carre {
+    width: 100% !important;
+  }
+  input {
+    font-size: 20px;
+  }
+}
+@media (max-width: 465px) {
+  td,
+  th {
+    font-size: 15px;
+    padding: 0.75em 0em;
+  }
+  .despawn {
+    display: none !important;
+  }
+}
+@media (max-width: 365px) {
+  .despawn2 {
+    display: none !important;
+  }
+}

@@ -1,0 +1,641 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: marvel, sans-serif;
+  background-color: #120d31;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@keyframes moveAndRotate {
+  0% {
+    left: -100px;
+    transform: translateY(-50%) rotate(0deg);
+  }
+
+  20% {
+  }
+
+  50% {
+    transform: translateY(-50%) rotate(180deg);
+  }
+
+  100% {
+    left: 100vw;
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+.banner {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../images/Fond-hero-avangers.jpg");
+  background-size: cover;
+  background-position: center;
+  animation: bgZoomIn 4s ease-in-out 1 forwards;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../images/after.png");
+  background-size: cover;
+  background-position: top;
+  transform: scale(2);
+  animation: bgZoomOut 4s ease-in-out 1 forwards;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.svg-hero {
+  fill: transparent;
+  stroke: #ffffff;
+  stroke-width: 0.1;
+  stroke-dasharray: 20;
+  animation: textAnimation 4s ease-in-out 1 forwards;
+}
+
+@keyframes textAnimation {
+  0% {
+    stroke-dashoffset: 50;
+  }
+  80% {
+    fill: transparent;
+  }
+  100% {
+    fill: #fff;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes bgZoomIn {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes bgZoomOut {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(2);
+  }
+}
+
+/* Hero section titre */
+
+.fond-arrivée {
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 0.1;
+  stroke-dasharray: 50;
+  stroke-dashoffset: 50;
+  animation: textAnimation 4s ease-in-out 1 forwards;
+}
+
+@keyframes textAnimation {
+  0% {
+    stroke-dashoffset: 50;
+  }
+  80% {
+    fill: transparent;
+  }
+  100% {
+    fill: #fff;
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Fin Hero section titre */
+
+.barre-recherche2 {
+  display: flex;
+  justify-content: center;
+}
+
+.logo-alignement {
+  display: flex;
+  justify-content: flex-start;
+  text-align: start;
+}
+
+img.logo1 {
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+  width: 65%;
+  margin-left: 2em;
+}
+i {
+  margin-right: 20px;
+}
+
+li {
+  list-style: none;
+}
+
+/*contour*/
+
+h1 {
+  color: white;
+}
+
+p {
+  color: white;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+/* Caroussel */
+
+.encadrement-card {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.titre-card {
+  font-size: 30px;
+  text-decoration: underline;
+  color: #63c7b2;
+}
+
+.paragraphe-card {
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+.card {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 2em;
+  width: 1000px;
+  background: #1c1f2b;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+}
+
+.boutton-a {
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0.6em 2em;
+  border: #63c7b2 solid 0.15em;
+  border-radius: 0.25em;
+  color: #63c7b2;
+  font-size: 1.5em;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border 300ms, color 300ms;
+  user-select: none;
+}
+
+.button p {
+  z-index: 1;
+}
+
+.button:hover {
+  color: #212121;
+}
+
+.button:active {
+  border-color: teal;
+}
+
+.button::after,
+.button::before {
+  content: "";
+  position: absolute;
+  width: 9em;
+  aspect-ratio: 1;
+  background: #63c7b2;
+  opacity: 50%;
+  border-radius: 50%;
+  transition: transform 500ms, background 300ms;
+}
+
+.button::before {
+  left: 0;
+  transform: translateX(-8em);
+}
+
+.button::after {
+  right: 0;
+  transform: translateX(8em);
+}
+
+.button:hover:before {
+  transform: translateX(-1em);
+}
+
+.button:hover:after {
+  transform: translateX(1em);
+}
+
+.button:active:before,
+.button:active:after {
+  background: teal;
+}
+/* Caroussel */
+
+.caroussel1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.caroussel {
+  overflow: hidden;
+  width: 1000px;
+}
+
+.wrap {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 250px;
+  animation: slide 30s linear infinite;
+}
+.wrap .image-caroussel {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Animation pour un défilement continu */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(
+      calc(-10 * 250px)
+    ); /* Défiler toute la largeur d'un set */
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* .btn-primary {
+      @apply py-1.5 px-3 text-center bg-blue-700 rounded-md text-white;
+  } */
+}
+
+/* Animation footer */
+
+.containerrr {
+  position: relative;
+  height: 20vh;
+}
+
+.wavee {
+  position: absolute;
+  bottom: 0;
+  height: 120px;
+  width: 100%;
+  background: url("images/wave.png") repeat-x;
+  background-size: 250rem 30rem;
+  animation: animate 15s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: 0;
+    background-position-x: -250rem;
+  }
+}
+
+.wavee:nth-child(1) {
+  opacity: 0.9;
+}
+
+.wavee:nth-child(2) {
+  opacity: 0.5;
+  animation-delay: 0.2s;
+  animation-direction: reverse;
+}
+
+.wavee:nth-child(3) {
+  opacity: 0.7;
+  animation-delay: 5s;
+}
+
+/* Footer */
+
+/* Footer */
+
+.footer {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.case-footer {
+  margin: 20px;
+  background-color: rgb(79, 78, 78);
+  width: 250px;
+  border-radius: 5px;
+}
+
+.case-footer1 {
+  margin: 20px;
+  background-color: rgb(79, 78, 78);
+  width: 250px;
+  border-radius: 5px;
+}
+
+.case-footer2 {
+  margin: 20px;
+  background-color: rgb(79, 78, 78);
+  width: 250px;
+  border-radius: 5px;
+}
+
+.titre-case {
+  font-size: 25px;
+  font-weight: 550;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.paragraphe-footer {
+  text-align: left;
+  margin-left: 20px;
+}
+
+/* .footer-mentions {
+  display: flex;
+  text-align: end;
+  align-items: flex-end;
+} */
+
+.case-footer2 .footer-mentions {
+  display: flex;
+  flex-direction: column;
+}
+
+.taille-footer {
+  width: 150px;
+  height: 50px;
+  margin-left: 20px;
+}
+
+.barre3-footer {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  border: solid #63c7b2 2px;
+  border-radius: 1500px;
+}
+
+.center-footer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.image-logo-footer {
+}
+
+/* Test tailwind */
+
+@keyframes reveal {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes textReveal {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shine {
+  from {
+    transform: translateX(-100%) rotate(45deg);
+  }
+  to {
+    transform: translateX(200%) rotate(45deg);
+  }
+}
+
+.shine-effect::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transform: translateX(-100%) rotate(45deg);
+}
+
+.shine-effect:hover::before {
+  animation: shine 1.5s;
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+.split-reveal {
+  animation: reveal 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.text-reveal {
+  animation: textReveal 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.scroll-container {
+  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scroll-section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.content-mask {
+  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+
+.super-classe {
+  color: #11f1cb;
+}
+
+.image-logo-footer {
+  width: 70%;
+  height: 70%;
+}
+
+/* premier titre de la page */
+.Titre-nouveautes {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: inline;
+  font-size: 35px;
+  font-weight: 600;
+  color: black;
+  border-radius: 10px;
+  color: #63c7b2;
+  text-decoration: underline;
+}
+
+.Taille-image {
+  width: 400px;
+  height: 350px;
+  object-fit: cover;
+}
+
+.boutton-back {
+  padding: 10px;
+  background-color: #393939;
+  color: white;
+  font-size: 20px;
+  margin-bottom: 150px;
+}
+
+.Text-presentation {
+  margin-top: 100px;
+  text-align: center;
+  font-size: large;
+  background-color: rgb(0, 0, 0);
+  padding-bottom: 10px;
+}
+
+.titre-new {
+  margin-top: 150px;
+  text-align: center;
+  font-size: 30px;
+}
+
+/* Responsive footer */
+@media screen and (max-width: 1025px) {
+  .case-footer {
+    width: 250px;
+  }
+  .case-footer1 {
+    width: 250px;
+  }
+  .case-footer2 {
+    width: 250px;
+  }
+  .taille-footer {
+    width: 120px;
+    height: 40px;
+    margin-left: 20px;
+  }
+}
+
+/* Fin responsive footer */
+
+@media screen and (max-width: 1024px) {
+  .caroussel {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 606px) {
+  .carousel1 {
+    display: none;
+  }
+  .caroussel-display {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 606px) {
+  .caroussel {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* Responsive navbar */
+
+@media (max-width: 990px) {
+  header {
+    background: none;
+  }
+
+  .navbar .links,
+  .navbar .action-button {
+    display: none;
+  }
+
+  .navbar .burger-menu-button {
+    display: block;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+}

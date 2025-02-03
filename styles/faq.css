@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.font_noir {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.arriere_plan {
+  background-image: url(../images/arriere_plan_faq_2.jpg);
+  /*Credit wallpaper: https://wallpapers.com/wallpapers/avengers-age-of-ultron-superheroes-desktop-2kntzwv825wvmmcx/download*/
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top center;
+  height: auto;
+}
+
+.police_marvel {
+  font-family: Marvel, bold;
+}
+
+.questions {
+  font-family: Marvel;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.reponses {
+  font-family: Marvel;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.bordure {
+  margin: auto;
+  width: 90%;
+  border: solid;
+  border-radius: 5px;
+  border-color: #ffffff;
+}
+
+@media only screen and (max-width: 600px) {
+  .arriere_plan {
+    background-image: url(/images/arriere_plan_faq.jpg);
+    /*crédit wallpapers : https://wallpapers.com/wallpapers/dope-avengers-wallpaper-9bb27wb2m6ek6mpf/download#google_vignette*/
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top center;
+    height: auto;
+  }
+}

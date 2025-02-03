@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.titre {
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  color: #3a9bc5;
+  font-weight: bold;
+  font-size: 60px;
+}
+
+.font_noir{
+    background-color: rgba(0, 0, 0, 0.7);
+    height: auto;
+  }
+
+.theme{
+    color:#FFFFFF;
+    font-family: Marvel,italic;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+  .arriere_plan{
+    background-image: url(/images/arriere_plan_comment_ca_marche.jpg);
+    width:auto;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top center;
+    height: auto;
+  }
+
+  .police_Marvel{
+    color:#FFFFFF;
+    font-size: 20px;
+    font-family: Marvel,italic;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    width: auto;
+    color: white;
+              
+  }          
+  .carte_sv{
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: auto;
+    backdrop-filter: blur(3px);
+    width: 80%;
+    padding-bottom: 20px;
+    border-color: #3a9bc5;
+    border-width: 5px;
+}
+
+.phrase{
+  color: #ffffff;
+  font-family: Marvel, italic;
+  font-weight: bold;
+  text-align: center;
+  padding: 3%;
+  font-size: 2.5rem;
+}
+
+
+@media only screen and (max-width : 768px) {           
+  .carte_sv{
+    backdrop-filter: blur(3px);
+    padding-bottom: 20px;
+    border-color: #3a9bc5;
+    border-width: 5px;
+}
+  .police_Marvel{
+    color:#FFFFFF;
+    font-size: 25px;
+    font-family: Marvel,italic;
+}
+}
+
+@media only screen and (max-width : 320px) { 
+
+  .carte_sv{
+    backdrop-filter: blur(3px);
+    margin-left: auto!important;
+    margin-right: auto!important;
+    padding-bottom: 100px;
+    border-color: #3a9bc5;
+    border-width: 5px;
+   }
+
+   .police_Marvel{
+    color:#FFFFFF;
+    font-size: 20px;
+    font-family: Marvel,italic;
+  }
+}
+
+  
